@@ -4,6 +4,6 @@ public class Main {
 	Kalk kalk = new Kalk();
 	kalk.setMath();
 	kalk.doMath();
-	kalk.continueMath();
+	kalk.continueMath(); //kan forsette men...
     }
 }

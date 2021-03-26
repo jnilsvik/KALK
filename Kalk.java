@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Kalk {
@@ -5,10 +6,11 @@ public class Kalk {
     int y;
     int z;
     String symbol;
+    String history = "";
     Scanner input = new Scanner(System.in);
 
     public void setMath() {
-
+        // vurder console rewrite: https://p2p.wrox.com/java-gui/19782-console-output-rewriting.html
         System.out.println("""
                 Calculator booted!\s
                 Input an integer:""");
@@ -39,14 +41,18 @@ public class Kalk {
             }
             default -> System.out.println("Please use ONE of the specified chars");
         }
-        System.out.println(""+x+" "+symbol+" "+y+" = "+z);
+        history += "= "+ z +" | ";
+        //kan erstatte denne med en array so holder historien for hver utregning sennere
+
+        System.out.println(history = x+ " "+ symbol +" " + y + " = " + z);
 
     }
 
     public void continueMath(){
         x=z;
         z=0;
-        System.out.println("Input +,-,/ or *:");
+
+        System.out.println("-----" +x + "\nInput +,-,/ or *:");
         symbol = input.next();
 
         System.out.println("""
