@@ -10,7 +10,7 @@ public class App {
         result = 0;
         char operator;
         do {
-            System.out.println("Pick an operator [+ - * /] or Continue prior calculation [C] or Exit [Q]");
+            System.out.println("Start anew by picking an operator [+ - * /] or Continue prior calculation [C] or Exit [Q]");
                 operator = kalk.next().charAt(0);
                         switch (operator) {
                             case '+':
@@ -59,6 +59,7 @@ public class App {
                                     case '+':
                                         System.out.println("Would you kindly enter the 2nd number");
                                         num2 = kalk.nextDouble();
+                                        System.out.println(result + " + " + num2 + " = ");
                                         result = result + num2;
                                         System.out.println(result);
                                         break;     
@@ -66,6 +67,7 @@ public class App {
                                     case '-':
                                         System.out.println("Would you kindly enter the 2nd number");
                                         num2 = kalk.nextDouble();
+                                        System.out.println(result + " - " + num2 + " = ");
                                         result = result - num2;
                                         System.out.println(result);
                                         break;
@@ -73,13 +75,15 @@ public class App {
                                     case '*':
                                         System.out.println("Would you kindly enter the 2nd number");
                                         num2 = kalk.nextDouble();
+                                        System.out.println(result + " * " + num2 + " = ");
                                         result = result * num2;
                                         System.out.println(result);
                                         break;
-                          
+                        
                                     case '/':
                                         System.out.println("Would you kindly enter the 2nd number");
                                         num2 = kalk.nextDouble();
+                                        System.out.println(result + " / " + num2 + " = ");
                                         result = result / num2;
                                         System.out.println(result);
                                         break;
